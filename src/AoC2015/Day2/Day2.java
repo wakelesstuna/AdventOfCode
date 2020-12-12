@@ -1,3 +1,4 @@
+/*
 package AoC2015.Day2;
 
 import utils.FileUtil;
@@ -17,7 +18,7 @@ public class Day2 {
     }
 
     public static void part1(){
-        List<String> input = FileUtil.readFileStringList("src/Day2/day2.txt");
+        List<String> input = FileUtil.readFileStringList("src/AoC2015/Day2/day2.txt");
         String[] temp;
         int totalSurface = 0;
         for (String s : input){
@@ -34,7 +35,7 @@ public class Day2 {
     }
 
     public static void part2(){
-        List<String> input = FileUtil.readFileStringList("src/Day2/day2.txt");
+        List<String> input = FileUtil.readFileStringList("src/AoC2015/Day2/day2.txt");
         //List<String> input = Collections.singletonList("2x3x4");
 
         String[] temp;
@@ -60,4 +61,4 @@ public class Day2 {
     }
 
 
-}
+}*/

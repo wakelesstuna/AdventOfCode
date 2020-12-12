@@ -1,6 +1,9 @@
+/*
 package AoC2015.Day1;
 
 import utils.FileUtil;
+
+import java.util.List;
 
 public class Day1 {
 
@@ -11,7 +14,7 @@ public class Day1 {
     }
 
     public static void part1(){
-        String input = FileUtil.readFileString("src/Day1/day1.txt");
+        List<String> input = FileUtil.readFileString("src/AoC2015/Day1/day1.txt");
         int floor = 0;
 
         for (int i = 0; i < input.length(); i++) {
@@ -26,7 +29,7 @@ public class Day1 {
     }
 
     public static void part2(){
-        String input = FileUtil.readFileString("src/Day1/day1.txt");
+        String input = FileUtil.readFileString("src/AoC2015/Day1/day1.txt");
         int floor = 0;
         int j = 0;
 
@@ -45,3 +48,4 @@ public class Day1 {
         System.out.println(j);
     }
 }
+*/
