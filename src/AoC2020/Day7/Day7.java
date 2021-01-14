@@ -60,7 +60,6 @@ public class Day7 {
                 return true;
             }
         }
-
         return false;
     }
 
@@ -78,3 +77,4 @@ public class Day7 {
         public String bagName;
     }
 }
+
