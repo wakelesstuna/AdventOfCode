@@ -20,12 +20,12 @@ fun part1(): Int{
 
 fun part2(): Long{
     val list = dubbleList(input)
-    val result = goDown(1,list,1) *
+    return  goDown(1,list,1) *
             goDown(3,list,1) *
             goDown(5,list, 1) *
             goDown(7, list, 1) *
             goDown(1, list, 2)
-    return result
+
 }
 
 fun goDown(toTheRight: Int, list: List<String>, down: Int): Long{
