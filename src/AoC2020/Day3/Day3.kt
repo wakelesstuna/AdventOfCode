@@ -14,7 +14,7 @@ fun dubbleList(list: List<String>): List<String> {
 fun part1(): Int{
     var count = 0
     var treeCount = 0
-    list.forEach { s -> if (s[count] =='#') treeCount++; count+=3 }
+    list.forEach { s -> if (s[count] == '#') treeCount++; count += 3 }
     return treeCount
 }
 
@@ -29,12 +29,7 @@ fun part2(): Long{
 fun goDown(toTheRight: Int, list: List<String>, down: Int): Long{
     var treeCount = 0L
     var count = 0
-    for (s in 0..list.size-down step down ){
-        if (list[s][count] == '#'){
-            treeCount++
-        }
-        count+= toTheRight
-    }
+    (0..list.size-down step down).forEach { s -> if (list[s][count] == '#') treeCount++; count+= toTheRight }
     return treeCount
 }
 
