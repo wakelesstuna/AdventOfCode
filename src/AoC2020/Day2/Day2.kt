@@ -4,7 +4,7 @@ import java.io.File
 
 fun parse(file: File): List<List<String>> = file.readLines().map { it.split(" ",": ","-") }
 
-fun valid(min: Int, max: Int, char: Char, string: String): Boolean{
+fun valid1(min: Int, max: Int, char: Char, string: String): Boolean{
     var counter = 0
     string.forEach { s -> if (s == char) {counter++} }
     return counter in min..max
@@ -12,7 +12,7 @@ fun valid(min: Int, max: Int, char: Char, string: String): Boolean{
 
 fun part1(file: File): Int {
     var counter = 0
-    parse(file).forEach { s -> if (valid(s[0].toInt(), s[1].toInt(), s[2].first(), s[3])) {counter++} }
+    parse(file).forEach { s -> if (valid1(s[0].toInt(), s[1].toInt(), s[2].first(), s[3])) {counter++} }
     return counter
 }
 
