@@ -11,7 +11,7 @@ fun part2(): Unit = run outForeach@{ input.forEach { i -> input.drop(0).forEach 
 
 fun main() {
     ExecutionTime.start()
-    //part1()
+    part1()
     part2()
     ExecutionTime.stop()
 

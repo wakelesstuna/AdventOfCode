@@ -1,5 +1,6 @@
 package AoC2020.Day3
 
+import utils.ExecutionTime
 import java.io.File
 
 val input = File("src/AoC2020/Day3/day3.txt").readLines()
@@ -29,11 +30,13 @@ fun part2(): Long{
 fun goDown(toTheRight: Int, list: List<String>, down: Int): Long{
     var treeCount = 0L
     var count = 0
-    (0..list.size-down step down).forEach { s -> if (list[s][count] == '#') treeCount++; count+= toTheRight }
+    (0..list.size-down step down).forEach { if (list[it][count] == '#') treeCount++; count+= toTheRight }
     return treeCount
 }
 
 fun main() {
+    ExecutionTime.start()
     println(part1())
     println(part2())
+    ExecutionTime.stop()
 }
