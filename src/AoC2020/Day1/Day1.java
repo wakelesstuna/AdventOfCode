@@ -1,6 +1,7 @@
 package AoC2020.Day1;
 
 import utils.FileUtil;
+import utils.ExecutionTime;
 import java.util.List;
 
 public class Day1 {
@@ -8,8 +9,10 @@ public class Day1 {
     private static final  List<Integer> input = FileUtil.readFileInt("src/AoC2020/Day1/day1.txt");
 
     public static void main(String[] args) {
+        ExecutionTime.start();
         part1();
         part2();
+        ExecutionTime.stop();
     }
 
     public static void part1(){

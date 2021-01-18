@@ -3,9 +3,9 @@ package AoC2020.Day3
 import java.io.File
 
 val input = File("src/AoC2020/Day3/day3.txt").readLines()
-val list = dubbleList(input)
+val list = doubleList(input)
 
-fun dubbleList(list: List<String>): List<String> {
+fun doubleList(list: List<String>): List<String> {
     val temp: MutableList<String> = mutableListOf()
     list.forEach { s -> temp.add(s.repeat(200)) }
     return temp
