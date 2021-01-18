@@ -4,28 +4,16 @@ import utils.ExecutionTime
 import java.io.File
 
 val input = File("src/AoC2020/Day3/day3.txt").readLines()
-val list = doubleList(input)
 
-fun doubleList(list: List<String>): List<String> {
-    val temp: MutableList<String> = mutableListOf()
-    list.forEach { s -> temp.add(s.repeat(200)) }
-    return temp
-}
+fun bigList(list: List<String>): List<String> = list.map { it.repeat(200) }
 
-fun part1(): Int{
-    var count = 0
-    var treeCount = 0
-    list.forEach { s -> if (s[count] == '#') treeCount++; count += 3 }
-    return treeCount
-}
+fun part1(): Int = goDown(3, bigList(input), 1).toInt()
 
-fun part2(): Long{
-    return  goDown(1,list,1) *
-            goDown(3,list,1) *
-            goDown(5,list, 1) *
-            goDown(7, list, 1) *
-            goDown(1, list, 2)
-}
+fun part2(): Long = goDown(1,bigList(input),1) *
+            goDown(3,bigList(input),1) *
+            goDown(5,bigList(input), 1) *
+            goDown(7, bigList(input), 1) *
+            goDown(1, bigList(input), 2)
 
 fun goDown(toTheRight: Int, list: List<String>, down: Int): Long{
     var treeCount = 0L
