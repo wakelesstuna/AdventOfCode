@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class Day4 {
 
-    private static final List<String> input = FileUtil.readFileString("src/AoC2020/Day4/day4.txt");
+    private static final List<String> input = FileUtil.readFileString("src/AoC2020/Day4/test.txt");
 
 
     public static void main(String[] args) {
