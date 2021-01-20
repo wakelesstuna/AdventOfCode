@@ -4,11 +4,8 @@ import java.io.File
 
 fun parse(file: File): List<List<String>> = file.readLines().map { it.split(" ",": ","-") }
 
-fun valid1(min: Int, max: Int, char: Char, string: String): Boolean{
-    var counter = 0
-    string.forEach { s -> if (s == char) {counter++} }
-    return counter in min..max
-}
+
+fun valid1(min: Int, max: Int, char: Char, string: String): Boolean = string.filter { it == char }.count() in min..max
 
 fun valid2(min: Int, max: Int, char: Char, string: String): Boolean = ((string[min -1] == char) xor (string[max -1] == char))
 
